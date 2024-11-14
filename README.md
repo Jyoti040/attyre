@@ -1,7 +1,3 @@
-Here's a README file based on the details provided and the structure of your repository.
-
----
-
 # Attyre
 
 Attyre is a custom color palette generation tool designed to help users create customized color palettes based on selecting colors from image , choosing their personal preferences, including undertones and preferences for intensity, seasonal, and occasion-based styles.
