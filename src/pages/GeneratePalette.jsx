@@ -172,7 +172,7 @@ const GeneratePalette = () => {
                 setIsSubmit(true)
                 setTimeout(() => {
                     if (res.data.palette) {
-                        navigate('/personalised-palette', { state: res.data.palette || apiJSON})
+                        navigate('/personalised-palette', { state: res.data.palette })
                     }
                 }, 3000)
             }).catch((err) => {
