@@ -226,7 +226,7 @@ const GeneratePalette = () => {
                                         <button className='h-10 w-10 rounded-full border border-black'
                                             style={{ backgroundColor: colors.skin }}
                                             onClick={() => setActiveColor('skin')}
-  type='button'
+                                            type='button'
                                         ></button>
                                         <label className='font-playfair font-md text-center font-semibold'>Skin</label>
                                     </div>
@@ -234,7 +234,7 @@ const GeneratePalette = () => {
                                         <button className='h-10 w-10 rounded-full border border-black'
                                             style={{ backgroundColor: colors.hair }}
                                             onClick={() => setActiveColor('hair')}
-                                             type='button'
+                                            type='button'
                                         ></button>
                                         <label className='font-playfair font-md text-center font-semibold'>Hair</label>
                                     </div>
@@ -242,7 +242,7 @@ const GeneratePalette = () => {
                                         <button className='h-10 w-10 rounded-full border border-black'
                                             style={{ backgroundColor: colors.eye }}
                                             onClick={() => setActiveColor('eye')}
-                                             type='button'
+                                            type='button'
                                         ></button>
                                         <label className='font-playfair font-md text-center font-semibold'>Eye</label>
                                     </div>
