@@ -6,7 +6,6 @@ import PersonalisedPalette from './pages/PersonalisedPalette'
 import "@fontsource/inter";
 import "@fontsource/playfair-display";
 import Colors from './pages/colors'
-import ColorPickerFromCanvas from './test'
 
 const App = () => {
   return (
@@ -17,7 +16,6 @@ const App = () => {
       <Route path='/generate-palette' element={<GeneratePalette/>}/>
       <Route path='/personalised-palette' element={<PersonalisedPalette/>}/>
       <Route path='/image' element={<Colors/>}/>
-      <Route path='/test' element={<ColorPickerFromCanvas/>}/>
     </Routes>
    </Router>
     </>
