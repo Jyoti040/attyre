@@ -180,7 +180,7 @@ const GeneratePalette = () => {
                 setIsAxiosError(true)
                 if (err.response?.data?.message) setError(err.response?.data?.message)
                 else setAxiosError(err.message)
-                navigate('/personalised-palette', { state: apiJSON})
+           //     navigate('/personalised-palette', { state: apiJSON})
             })
     }
     return (
