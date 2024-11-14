@@ -178,7 +178,7 @@ const GeneratePalette = () => {
                 console.log(err)
                 setIsAxiosError(true)
                 if (err.response?.data?.message) setError(err.response?.data?.message)
-                else setError(err)
+                else setAxiosError(err)
             })
     }
     return (
