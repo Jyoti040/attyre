@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 const PersonalisedPalette = () => {
 
   const location = useLocation()
-  const personalisedPalette = location.state.apiData
+  const personalisedPalette = location.state|| location.state.apiData
   console.log('in personalised palette ',location.state)
   const paletteName = personalisedPalette.palette_Name;
   const paletteDescription = personalisedPalette.palette_Description

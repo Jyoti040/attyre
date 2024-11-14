@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import home_img from '../assets/home_img.png'
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from 'axios'
+import { apiJSON } from '../data/dummyData';
 
 const backendURL = import.meta.env.VITE_BACKEND_URL
 
@@ -171,14 +172,15 @@ const GeneratePalette = () => {
                 setIsSubmit(true)
                 setTimeout(() => {
                     if (res.data.palette) {
-                        navigate('/personalised-palette', { state: res.data.palette })
+                        navigate('/personalised-palette', { state: res.data.palette || apiJSON})
                     }
                 }, 3000)
             }).catch((err) => {
                 console.log(err)
                 setIsAxiosError(true)
                 if (err.response?.data?.message) setError(err.response?.data?.message)
-                else setAxiosError(err)
+                else setAxiosError(err.message)
+                navigate('/personalised-palette', { state: apiJSON})
             })
     }
     return (
