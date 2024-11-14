@@ -46,6 +46,7 @@ Attyre is a custom color palette generation tool designed to help users create c
 ## Libraries and Frameworks Used
 
 ### Frontend
-- **React**: JavaScript library for building user interfaces.
-- **Tailwind CSS**: Utility-first CSS framework for styling.
-- **axios**: For handling HTTP requests to the backend API.
+- **React JS**: A powerful javaScript library for building interative and dynamic user interfaces, focusing on component based architecture for efficient UI development.
+- **Tailwind CSS**: A utility-first CSS framework that provides low-level , resuable styling classes for building custom responsive designs quickly.
+- **axios**: A promise-based  HTTP cient for javascript , makig it easy to send asynchronous HTTP requests to REST endpoints in web applications.
+- **lucide react**: An open source icon library offering customizable icons for modern web applications.
