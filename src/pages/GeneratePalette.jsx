@@ -176,7 +176,7 @@ const GeneratePalette = () => {
                 setIsSubmit(true)
                 setTimeout(() => {
                     if (res.data.palette) {
-                        navigate('/personalised-palette', { state: res.data.palette || apiJSON})
+                        navigate('/personalised-palette', { state: res.data.palette })
                     }
                 }, 3000)
             }).catch((err) => {
@@ -184,7 +184,7 @@ const GeneratePalette = () => {
                 setIsAxiosError(true)
                 if (err.response?.data?.message) setError(err.response?.data?.message)
                 else setAxiosError(err.message)
-                navigate('/personalised-palette', { state: apiJSON})
+           //     navigate('/personalised-palette', { state: apiJSON})
             })
     }
     return (
