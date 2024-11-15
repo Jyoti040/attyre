@@ -8,6 +8,7 @@ const PaletteColors = ({heading , colors}) => {
         </div>
         <div className='grid grid-cols-2 lg:grid-cols-5 gap-5'>
             {
+              
               colors.map((color,index)=>(
                  <div key={index}>
                     <div 

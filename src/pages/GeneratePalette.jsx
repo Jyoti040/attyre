@@ -35,7 +35,7 @@ const GeneratePalette = () => {
     const [undertoneError, setUndertoneError] = useState('');
     const [isUndertoneError, setIsUndertoneError] = useState(false);
     const [tempColor, setTempColor] = useState(null);
-    const [dataToSend, setdataToSend] = useState({})
+ //   const [dataToSend, setdataToSend] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
     const [isAxiosError, setIsAxiosError] = useState(false)
     const [axiosError, setAxiosError] = useState('')
@@ -65,8 +65,9 @@ const GeneratePalette = () => {
         handleImageColor();
 
         if (!isImageError) {
-            setdataToSend(colors)
-            handleAxios()
+            console.log('in handle color submit')
+            const data ={ skinColor: colors.skin, hairColor: colors.hair, eyeColor: colors.eye}
+            handleAxios(data)
         }
     }
 
@@ -139,8 +140,9 @@ const GeneratePalette = () => {
             setPreferenceError('');
             setIsPreferenceError(false)
             console.log('Selected Preference :', preferences);
-            setdataToSend({ skinColor: colors.skin, hairColor: colors.hair, eyeColor: colors.eye, ...preferences })
-            handleAxios()
+            const data ={ skinColor: colors.skin, hairColor: colors.hair, eyeColor: colors.eye , ...preferences}
+           // setdataToSend({ skinColor: colors.skin, hairColor: colors.hair, eyeColor: colors.eye, ...preferences })
+            handleAxios(data)
         }
     }
 
@@ -160,12 +162,14 @@ const GeneratePalette = () => {
             setUndertoneError('');
             setIsUndertoneError(false)
             console.log('Selected Undertone :', undertones);
-            setdataToSend({ skinColor: colors.skin, hairColor: colors.hair, eyeColor: colors.eye, undertone: undertones })
-            handleAxios()
+            const data ={ skinColor: colors.skin, hairColor: colors.hair, eyeColor: colors.eye,undertone: undertones }
+           // setdataToSend({ skinColor: colors.skin, hairColor: colors.hair, eyeColor: colors.eye, undertone: undertones })
+            handleAxios(data)
         }
     }
 
-    const handleAxios = async () => {
+    const handleAxios = async (dataToSend) => {
+        console.log('in axios' , dataToSend , `${backendURL}/generate-palette`)
         await axios.post(`${backendURL}/generate-palette`, dataToSend)
             .then((res) => {
                 setIsAxiosError(false)
